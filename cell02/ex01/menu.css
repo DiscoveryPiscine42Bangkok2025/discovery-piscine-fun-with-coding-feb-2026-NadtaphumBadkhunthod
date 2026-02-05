@@ -3,9 +3,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at center, #f0f4f8, #d9e2ec);
     display: flex;
     justify-content: center;
