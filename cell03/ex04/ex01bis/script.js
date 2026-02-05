@@ -6,15 +6,16 @@ $(document).ready(function() {
 
     function update() {
         $balloon.css({
-            'width': size + 'px',
-            'height': size + 'px',
-            'background-color': colors[colorIdx]
+            width: size,
+            height: size,
+            backgroundColor: colors[colorIdx]
         });
     }
 
-    $balloon.click(function() {
+    $balloon.on('click', function() {
         size += 10;
-        colorIdx = (colorIdx + 1) % 3;
+        colorIdx = (colorIdx + 1) % colors.length;
+
         if (size > 420) {
             size = 200;
             colorIdx = 0;
@@ -22,9 +23,12 @@ $(document).ready(function() {
         update();
     });
 
-    $balloon.mouseleave(function() {
-        if (size > 200) size -= 5;
-        colorIdx = (colorIdx - 1 + 3) % 3;
-        update();
+
+    $balloon.on('mouseleave', function() {
+        if (size > 200) {
+            size -= 5;
+            colorIdx = (colorIdx - 1 + colors.length) % colors.length;
+            update();
+        }
     });
 });
