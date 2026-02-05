@@ -1,54 +1,116 @@
-  .sandwich-container {
-    display: inline-block;
-  }
+* {
+    box-sizing: border-box;
+}
 
-  .sandwich-label {
-    display: block;
-
-    padding: 15px;
-    background-color: #d2b48c;
-    color: #5d4037;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    border: 2px solid #8d6e63;
-    border-radius: 10px 10px 0 0;
-    transition: background 0.3s;
-  }
-
-  .sandwich-label:hover {
-    background-color: #c19a6b;
-  }
-
-  #sandwich-toggle {
-    display: none;
-  }
-
-  .fillings {
-    max-height: 0;
-    overflow: hidden;
-    border: 0px solid #8d6e63;
-  }
-
-  #sandwich-toggle:checked ~ .fillings {
-    max-height: 300px;
-    border: 2px solid #8d6e63;
-    border-radius: 0 0 10px 10px;
-  }
-  
-  .ingredient {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #f0f4f8, #d9e2ec);
     display: flex;
-  }
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-  .ham { border-left: 10px solid #ff80ab; }
-  .cheese { border-left: 10px solid #ffd54f; }
-  .butter { border-left: 10px solid #fff9c4; }
-  .bread {border-left: 10px solid #c19a6b; }
+.sandwich-wrapper {
+    position: relative;
+    width: 350px;
+    z-index: 10;
+}
 
-  .ingredient:last-child { border-bottom: none; }
-  
-  .ingredient:hover {
-    background-color: #fff9f0;
-  }
+#toggle-sandwich {
+    display: none;
+}
+
+.sandwich-bun-top {
+    display: block;
+    background: linear-gradient(to bottom, #cfa35c, #b08d4c);
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(139, 69, 19, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border-bottom: 3px solid #8f6f3b;
+    user-select: none;
+}
+
+.sandwich-bun-top span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sandwich-bun-top .subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.sandwich-bun-top:hover {
+    background: linear-gradient(to bottom, #dcb26d, #bd9a55);
+}
+
+#toggle-sandwich:checked + .sandwich-bun-top {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+    border-radius: 15px 15px 5px 5px;
+}
+
+.sandwich-filling-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    background-color: #fffbf0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    z-index: 1;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#toggle-sandwich:checked ~ .sandwich-filling-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.ingredient-layer {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 20px;
+    border-bottom: 1px dashed #e0d3c1;
+    color: #5a5a5a;
+}
+
+.ingredient-layer:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.data strong {
+    display: block;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.data ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.6;
+}
