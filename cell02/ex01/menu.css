@@ -1,0 +1,54 @@
+  .sandwich-container {
+    display: inline-block;
+  }
+
+  .sandwich-label {
+    display: block;
+
+    padding: 15px;
+    background-color: #d2b48c;
+    color: #5d4037;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #8d6e63;
+    border-radius: 10px 10px 0 0;
+    transition: background 0.3s;
+  }
+
+  .sandwich-label:hover {
+    background-color: #c19a6b;
+  }
+
+  #sandwich-toggle {
+    display: none;
+  }
+
+  .fillings {
+    max-height: 0;
+    overflow: hidden;
+    border: 0px solid #8d6e63;
+  }
+
+  #sandwich-toggle:checked ~ .fillings {
+    max-height: 300px;
+    border: 2px solid #8d6e63;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .ingredient {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+  }
+
+  .ham { border-left: 10px solid #ff80ab; }
+  .cheese { border-left: 10px solid #ffd54f; }
+  .butter { border-left: 10px solid #fff9c4; }
+  .bread {border-left: 10px solid #c19a6b; }
+
+  .ingredient:last-child { border-bottom: none; }
+  
+  .ingredient:hover {
+    background-color: #fff9f0;
+  }
