@@ -1,0 +1,20 @@
+body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.maintable {
+    width: 100%;
+    height: 100%;
+}
+
+#red_table {
+    background-color: red;
+}
+
+#blue_table {
+    background-color: blue;
+}
