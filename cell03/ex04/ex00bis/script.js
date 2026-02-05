@@ -1,6 +1,4 @@
-const btn = document.getElementById('colorBtn');
-
-btn.addEventListener('click', () => {
+$('#colorBtn').on('click', function() {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
+    $('body').css('background-color', randomColor);
 });
