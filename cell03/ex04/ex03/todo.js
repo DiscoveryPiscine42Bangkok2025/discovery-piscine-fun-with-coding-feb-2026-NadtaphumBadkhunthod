@@ -1,7 +1,6 @@
 $(document).ready(function() {
     const $list = $('#ft_list');
 
-    // Load from cookies
     const cookie = document.cookie.split('; ').find(row => row.startsWith('todos='));
     if (cookie) {
         const tasks = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
