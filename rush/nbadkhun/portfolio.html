@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nbadkhun Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home" data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100">
+
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home"><span class="text-primary">Portfolio</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#showcase">Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="section-padding bg-light ">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">About </h2>
+                <p class="text-muted">Meet the minds behind the code</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="https://ih1.redbubble.net/image.4999432064.0310/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+                        alt="nbadkhun" class="img-fluid rounded-circle shadow profile-img mb-3">
+
+                    <h3 class="fw-bold mb-1">Pluem</h3>
+                    <p class="text-muted mb-3 font-monospace">@nbadkhun</p>
+
+                    <div class="mb-4">
+                        <span
+                            class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 border border-primary border-opacity-10">
+                            <i class="fas fa-terminal me-2"></i>Backend Specialist
+                        </span>
+                    </div>
+                    <p class="text-muted px-3">
+                        Hi, I'm Pluem. I focus on scripting and making things happen behind the scenes.
+                        Passionate about building scalable logic and I absolutely love
+                        <span class="fw-bold text-dark"><i class="fab fa-node-js text-success"></i> NodeJS</span>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="showcase" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">My Technical Expertise</h2>
+                <p class="text-muted">The tools and technologies I use to build solutions</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fab fa-node-js fa-3x text-success"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Backend Development</h5>
+                            <p class="text-muted">
+                                Building robust server-side logic and scalable architectures using
+                                <strong>Node.js</strong> and Express.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-database fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Data & Logic</h5>
+                            <p class="text-muted">
+                                Designing efficient database schemas and writing complex algorithms to handle data flow
+                                securely.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-terminal fa-3x text-warning"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Scripting & DevOps</h5>
+                            <p class="text-muted">
+                                Automating tasks with shell scripting, managing versions with Git, and optimizing
+                                deployment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-dark text-white">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Contract</h2>
+
+            <div class="row text-center justify-content-center">
+                <div class="col-md-6 mb-5 mb-md-0">
+
+                    <div class="d-flex justify-content-center gap-3 social-links">
+                        <a href="#" class="text-white"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3 bg-black text-center text-secondary">
+        <small>&copy; 2026 snitisak & nbadkhun. All rights reserved.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

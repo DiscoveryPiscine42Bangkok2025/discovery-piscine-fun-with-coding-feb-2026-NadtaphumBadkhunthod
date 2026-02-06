@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Portfolio loaded successfully!");
+    console.log("Team Portfolio loaded!");
 
     const navLinks = document.querySelectorAll('.nav-link');
     const menuToggle = document.getElementById('navbarNav');
@@ -12,15 +12,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    });
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
 });
