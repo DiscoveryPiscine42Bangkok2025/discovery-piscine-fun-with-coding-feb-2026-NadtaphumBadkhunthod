@@ -1,17 +1,12 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 56px;
-}
-
 .section-padding {
-    padding: 80px 0;
+    padding: 120px 0;
 }
 
-.text-primary {
-    color: #690dfd !important;
+.section-padding:last-of-type {
+    padding: 50px 0;
 }
 
-.nav-link.active {
+.text-primary, .nav-link.active {
     color: #690dfd !important;
 }
 
@@ -28,7 +23,7 @@ body {
 }
 
 .social-links a {
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
